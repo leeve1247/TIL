@@ -63,7 +63,7 @@ git remote remove "<github 주소>"
 
 
 
-#### git push master origin
+#### git push origin master
 
 으하하하 github에 commit한 것을 remote repository에 저장하는 것이다.
 
