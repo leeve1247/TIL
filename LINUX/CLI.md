@@ -56,3 +56,19 @@ print("Hello World!")
 >
 > 2.입니다.
 
+#### vi
+
+vim 에디터를 사용하여 편집
+
+연습할 수 있는 사이트 [찾아가기](https://vim-adventures.com/)
+
+
+
+![이미자](CLI.assets/이미자.jpg)
+
+![집에가고싶다](CLI.assets/집에가고싶다.png)
+
+
+
+
+
