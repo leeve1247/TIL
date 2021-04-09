@@ -1,0 +1,5 @@
+{
+    "name" : "crong",
+    "age" : 17,
+    "favorites" : ["apple","orange","banana"]
+}
