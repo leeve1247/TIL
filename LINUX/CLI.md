@@ -33,16 +33,6 @@ cd <PATH> #이동하고 싶은 폴더를 PATH에 입력
 
 
 
-#### python
-
-이건 오늘 배운게 아니지만 그냥 써보고 싶어
-
-```python
-print("Hello World!")
-```
-
-
-
 #### 생성
 
 - `touch` : 파일을 생성
@@ -59,6 +49,18 @@ print("Hello World!")
 #### vi
 
 vim 에디터를 사용하여 편집
+
+#### python
+
+이건 오늘 배운게 아니지만 그냥 써보고 싶어
+
+```python
+print("Hello World!")
+```
+
+
+
+
 
 연습할 수 있는 사이트 [찾아가기](https://vim-adventures.com/)
 
