@@ -19,6 +19,3 @@ def solution(k, room_number):
                     result.append(keys[-1])
                     break
     return result
-                
-
-print(result)
