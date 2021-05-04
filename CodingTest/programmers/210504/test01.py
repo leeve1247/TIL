@@ -1,3 +1,5 @@
+#https://programmers.co.kr/learn/courses/30/lessons/60057?language=python3#
+
 #문자열 나누기
 def dividing(s,num):
     lis = []
