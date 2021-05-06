@@ -1,4 +1,4 @@
-#판만들기
+#판 만들기
 def makekeypan(key,panlen,locklen,keylen):
     pan = []
     for i in range(panlen):
@@ -21,28 +21,26 @@ def rotate(lock,locklen):
     
 #자물쇠와 판(키를 넣은) 합치고 체크하기
 #체크해서 통과할 경우는 lock 부분이 모두 1일 때임
-def insert(pan,lock,panlen,locklen,row,col):
+def insert(pan,lock,locklen,row,col):
     isunlocked = False
     cannotunlocked = False
     count = 0
     utemp = None
     
-    for i in range(panlen):
+    for i in range(row,row+locklen):
         if cannotunlocked :
             break
-        for j in range(panlen):
-            if row <= i and i <= row+locklen-1 and col <= j and j <= col+locklen-1:
-                if pan[i][j] == ".":
-                    utemp = lock[i-row][j-col]
-                else:
-                    utemp = pan[i][j] + lock[i-row][j-col]
-                    
-                #판정
-                if utemp == 1:
-                    count += 1
-                elif utemp == 0 or utemp == 2 :
-                    cannotunlocked = True
-                    break
+        for j in range(col,col+locklen):
+            if pan[i][j] == ".":
+                utemp = lock[i-row][j-col]
+            else:
+                utemp = pan[i][j] + lock[i-row][j-col]
+            #판정
+            if utemp == 1:
+                count += 1
+            elif utemp == 0 or utemp == 2 :
+                cannotunlocked = True
+                break
     if count == locklen**2:
         isunlocked = True
     return isunlocked
@@ -65,26 +63,25 @@ def solution(key, lock):
         if answer == True:
             break
         for j in range(locklen + keylen -1):
-            if insert(pan,lock,panlen,locklen,i,j):
+            if insert(pan,lock,locklen,i,j):
                 answer = True
                 print(i,j,"0회전")
                 break
             lock = rotate(lock,locklen)
-            if insert(pan,lock,panlen,locklen,i,j):
+            if insert(pan,lock,locklen,i,j):
                 answer = True
                 print(i,j,"1회전")
                 break
             lock = rotate(lock,locklen)
-            if insert(pan,lock,panlen,locklen,i,j):
+            if insert(pan,lock,locklen,i,j):
                 answer = True
                 print(i,j,"2회전")
                 break
             lock = rotate(lock,locklen)
-            if insert(pan,lock,panlen,locklen,i,j):
+            if insert(pan,lock,locklen,i,j):
                 answer = True
                 print(i,j,"3회전")
                 break
             lock = rotate(lock,locklen)
-
 
     return answer
